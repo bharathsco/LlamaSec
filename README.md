@@ -23,17 +23,26 @@ Optional: GitHub PR suggestions, Slack notifications
 
 🔧 Example
 bash
-Copy
-Edit
+
 llama-sec scan --file package-lock.json
 Output:
 
 css
-Copy
-Edit
+
 ✅ CVE-2025-1234 affects log4j-core@2.14.0
 ⚠️ Exploitable: Yes (JNDI lookup enabled by default)
 🔧 Fix: Upgrade to 2.17.1
+
+🛠️ Next Steps:
+Set your OpenAI API key in your environment:
+
+bash
+export OPENAI_API_KEY="your-key-here"
+Run the tool:
+
+bash
+python llama_sec.py --file package-lock.json --context "Node.js API with public-facing endpoints"
+
 🔍 Why This Matters
 Security tools often overwhelm teams with alerts. LlamaSec brings intelligence and prioritization into the equation by combining LLM reasoning with real-world project context.
 
